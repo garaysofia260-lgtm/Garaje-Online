@@ -1,79 +1,118 @@
-// Base de datos inicial completa y organizada por categorías con fotos reales
+// Base de datos completa con imágenes reales e individuales para cada artículo
 const productosIniciales = [
     // --- TECNOLOGÍA ---
     {
         id: 1,
-        nombre: "Audífonos Inalámbricos Bluetooth",
-        precio: 55000,
+        nombre: "Audífonos Inalámbricos Pro",
+        precio: 65000,
         categoria: "Tecnología",
-        descripcion: "Cancelación de ruido, estuche de carga incluido.",
-        imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80",
+        descripcion: "Cancelación de ruido activa, estuche de carga USB-C.",
+        imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     },
     {
         id: 2,
-        nombre: "Smartwatch Deportivo Negro",
-        precio: 85000,
+        nombre: "Cámara Réflex Profesional",
+        precio: 850000,
         categoria: "Tecnología",
-        descripcion: "Monitor de ritmo cardíaco y notificaciones móviles.",
-        imagen: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80",
+        descripcion: "Lente 18-55mm, sensor de 24MP, bolso y tarjeta SD incluidos.",
+        imagen: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     },
-    // --- MODA ---
     {
         id: 3,
-        nombre: "Zapatos deportivos Nike",
-        precio: 65000,
-        categoria: "Moda",
-        descripcion: "Talla 40, en excelente estado, casi nuevos.",
-        imagen: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80",
+        nombre: "Reloj Inteligente Deportivo",
+        precio: 95000,
+        categoria: "Tecnología",
+        descripcion: "Resistente al agua, medición de pulso, batería de larga duración.",
+        imagen: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     },
+
+    // --- MODA ---
     {
         id: 4,
-        nombre: "Camiseta Casual Algodón",
-        precio: 20000,
+        nombre: "Tenis Deportivos Red",
+        precio: 80000,
         categoria: "Moda",
-        descripcion: "Talla M, color verde oliva en muy buen estado.",
-        imagen: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80",
+        descripcion: "Talla 40, suela liviana antideslizante, excelente estado.",
+        imagen: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     },
-    // --- JUEGOS ---
     {
         id: 5,
-        nombre: "Control Inalámbrico Consola",
-        precio: 50000,
-        categoria: "Juegos",
-        descripcion: "Ergonómico, compatible con múltiples plataformas.",
-        imagen: "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=500&q=80",
+        nombre: "Chaqueta de Cuero Vintage",
+        precio: 120000,
+        categoria: "Moda",
+        descripcion: "Talla L, estilo biker de alta calidad, cremalleras metálicas.",
+        imagen: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     },
     {
         id: 6,
-        nombre: "Cascos Gamer con Micrófono",
-        precio: 75000,
-        categoria: "Juegos",
-        descripcion: "Luces LED integradas, sonido envolvente estéreo.",
-        imagen: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=500&q=80",
+        nombre: "Gafas de Sol Clásicas",
+        precio: 35000,
+        categoria: "Moda",
+        descripcion: "Protección UV400, montura negra elegante con estuche rígido.",
+        imagen: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     },
-    // --- HOGAR ---
+
+    // --- JUEGOS ---
     {
         id: 7,
-        nombre: "Lámpara de Mesa Minimalista",
-        precio: 40000,
-        categoria: "Hogar",
-        descripcion: "Luz cálida ajustable, ideal para estudio o dormitorio.",
-        imagen: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80",
+        nombre: "Mando para Consola Inalámbrico",
+        precio: 55000,
+        categoria: "Juegos",
+        descripcion: "Soporta vibración doble, ergonómico y compatible con PC.",
+        imagen: "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     },
     {
         id: 8,
-        nombre: "Mochila Escolar Impermeable",
-        precio: 35000,
+        nombre: "Audífonos Gamer con Micrófono",
+        precio: 78000,
+        categoria: "Juegos",
+        descripcion: "Luces LED RGB, sonido envolvente y almohadillas acolchadas.",
+        imagen: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=600&q=80",
+        propietario: "Sistema"
+    },
+    {
+        id: 9,
+        nombre: "Consola Portátil Retro",
+        precio: 90000,
+        categoria: "Juegos",
+        descripcion: "Incluye más de 400 juegos clásicos, pantalla a color.",
+        imagen: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+        propietario: "Sistema"
+    },
+
+    // --- HOGAR ---
+    {
+        id: 10,
+        nombre: "Lámpara Minimalista de Mesa",
+        precio: 45000,
         categoria: "Hogar",
-        descripcion: "Múltiples compartimentos seguros para portátil.",
-        imagen: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80",
+        descripcion: "Luz cálida LED regulable, ideal para dormitorio u oficina.",
+        imagen: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
+        propietario: "Sistema"
+    },
+    {
+        id: 11,
+        nombre: "Mochila Moderna Multiuso",
+        precio: 40000,
+        categoria: "Hogar",
+        descripcion: "Compartimento acolchado para laptop, tela impermeable.",
+        imagen: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+        propietario: "Sistema"
+    },
+    {
+        id: 12,
+        nombre: "Sillón Confortable de Sala",
+        precio: 180000,
+        categoria: "Hogar",
+        descripcion: "Color gris, tapizado impecable, súper cómodo para descansar.",
+        imagen: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80",
         propietario: "Sistema"
     }
 ];
@@ -83,15 +122,15 @@ let productos = [];
 let productoSeleccionado = null;
 let categoriaActual = "Todos";
 
-// Inicialización de la App
+// Inicialización
 document.addEventListener("DOMContentLoaded", () => {
     cargarProductosLocalStorage();
     renderizarTodo();
 });
 
-// Cargar o inicializar almacenamiento local
+// Guardado y carga en el navegador
 function cargarProductosLocalStorage() {
-    const localData = localStorage.getItem("garaje_online_productos");
+    const localData = localStorage.getItem("garaje_online_productos_v2");
     if (localData) {
         productos = JSON.parse(localData);
     } else {
@@ -101,10 +140,10 @@ function cargarProductosLocalStorage() {
 }
 
 function guardarLocalStorage() {
-    localStorage.setItem("garaje_online_productos", JSON.stringify(productos));
+    localStorage.setItem("garaje_online_productos_v2", JSON.stringify(productos));
 }
 
-// Formatear Moneda Pesos Colombianos (COP)
+// Formatear precio en COP
 function formatearCOP(valor) {
     return new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -113,7 +152,7 @@ function formatearCOP(valor) {
     }).format(valor);
 }
 
-// Navegación entre Pestañas
+// Cambiar de Pestaña
 function cambiarPestana(tabId) {
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
     
@@ -132,20 +171,20 @@ function cambiarPestana(tabId) {
     }
 }
 
-// Renderizar Todo
+// Renderizar todos los módulos
 function renderizarTodo() {
     renderizarCarruselDestacados();
     renderizarCatalogo();
     renderizarMisPublicaciones();
 }
 
-// Crear Tarjeta de Producto con Imagen Real
+// Plantilla de Tarjetas
 function crearTarjetaProducto(p) {
     return `
         <div class="bg-white rounded-2xl p-2.5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
             <div>
                 <div class="w-full h-32 rounded-xl overflow-hidden bg-slate-100 mb-2 relative">
-                    <img src="${p.imagen || 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80'}" alt="${p.nombre}" class="w-full h-full object-cover">
+                    <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-cover">
                 </div>
                 <span class="text-[9px] font-bold text-indigo-600 uppercase bg-indigo-50 px-2 py-0.5 rounded-full">${p.categoria}</span>
                 <h4 class="font-semibold text-slate-800 text-xs mt-1 line-clamp-1">${p.nombre}</h4>
@@ -161,11 +200,10 @@ function crearTarjetaProducto(p) {
     `;
 }
 
-// Renderizar Carrusel Horizontal de Destacados en Inicio
+// Banner Deslizante de Destacados
 function renderizarCarruselDestacados() {
     const container = document.getElementById('carrusel-destacados');
-    // Tomamos los primeros 5 productos para el banner deslizante
-    const destacados = productos.slice(0, 5);
+    const destacados = productos.slice(0, 6);
     
     container.innerHTML = destacados.map(p => `
         <div class="min-w-[160px] max-w-[160px] bg-white rounded-2xl p-2.5 shadow-sm border border-slate-100 flex flex-col justify-between snap-start flex-shrink-0">
@@ -184,7 +222,7 @@ function renderizarCarruselDestacados() {
     `).join('');
 }
 
-// Renderizar Catálogo Completo
+// Renderizar Catálogo
 function renderizarCatalogo() {
     const container = document.getElementById('lista-productos');
     const busqueda = document.getElementById('buscador-input')?.value.toLowerCase().trim() || '';
@@ -211,7 +249,7 @@ function renderizarCatalogo() {
     container.innerHTML = filtrados.map(p => crearTarjetaProducto(p)).join('');
 }
 
-// Filtrar por Categoría
+// Filtrado de Categoría
 function filtrarPorCategoria(cat) {
     categoriaActual = cat;
     
@@ -226,9 +264,10 @@ function filtrarPorCategoria(cat) {
     });
 
     renderizarCatalogo();
+    cambiarPestana('productos');
 }
 
-// Filtrar por Buscador Dinámico
+// Buscador
 function filtrarProductos() {
     const input = document.getElementById('buscador-input');
     const btnLimpiar = document.getElementById('limpiar-buscador');
@@ -248,7 +287,7 @@ function limpiarBuscador() {
     filtrarProductos();
 }
 
-// Publicar Nuevo Producto
+// Formulario de Venta
 function publicarProducto(event) {
     event.preventDefault();
 
@@ -263,11 +302,11 @@ function publicarProducto(event) {
         return;
     }
 
-    // Imagen por defecto según categoría si no se introduce URL
-    let imagenPorDefecto = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80";
-    if (categoria === 'Hogar') imagenPorDefecto = "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80";
-    if (categoria === 'Moda') imagenPorDefecto = "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80";
-    if (categoria === 'Juegos') imagenPorDefecto = "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=500&q=80";
+    // Imagen por defecto realista según categoría si no se pasa URL
+    let imagenPorDefecto = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80";
+    if (categoria === 'Hogar') imagenPorDefecto = "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80";
+    if (categoria === 'Moda') imagenPorDefecto = "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80";
+    if (categoria === 'Juegos') imagenPorDefecto = "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=600&q=80";
 
     const nuevoProducto = {
         id: Date.now(),
@@ -288,7 +327,7 @@ function publicarProducto(event) {
     cambiarPestana('productos');
 }
 
-// Renderizar Perfil
+// Perfil de Usuario
 function renderizarMisPublicaciones() {
     const container = document.getElementById('mis-publicaciones-container');
     const misProds = productos.filter(p => p.propietario === "Usuario");
@@ -327,7 +366,7 @@ function eliminarProducto(id) {
     mostrarToast('Producto eliminado', 'info-circle');
 }
 
-// Modales y WhatsApp
+// Modal de WhatsApp
 function abrirModal(id) {
     productoSeleccionado = productos.find(p => p.id === id);
     if (!productoSeleccionado) return;
