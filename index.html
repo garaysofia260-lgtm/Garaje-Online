@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garaje Online | Compra y vende</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛍️ Garaje Online</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#publicar">Vender</a>
+        </nav>
+    </header>
+
+    <section class="principal" id="inicio">
+        <h2>¡Encuentra tesoros a buenos precios!</h2>
+        <p>Compra y vende productos de segunda mano fácilmente.</p>
+
+        <input type="text" id="buscador" placeholder="¿Qué estás buscando?">
+        <button onclick="buscarProductos()">Buscar</button>
+    </section>
+
+    <main>
+        <h2 id="productos">Productos disponibles</h2>
+
+        <div class="productos" id="listaProductos">
+
+            <article class="producto">
+                <div class="imagen">👟</div>
+                <h3>Zapatos deportivos</h3>
+                <p>Buen estado, talla 40</p>
+                <strong>$65.000 COP</strong>
+                <button onclick="comprar('Zapatos deportivos')">
+                    Me interesa
+                </button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen">🎮</div>
+                <h3>Control de videojuegos</h3>
+                <p>Usado y funcionando</p>
+                <strong>$50.000 COP</strong>
+                <button onclick="comprar('Control de videojuegos')">
+                    Me interesa
+                </button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen">👕</div>
+                <h3>Camiseta casual</h3>
+                <p>En buen estado</p>
+                <strong>$20.000 COP</strong>
+                <button onclick="comprar('Camiseta casual')">
+                    Me interesa
+                </button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen">🎒</div>
+                <h3>Mochila escolar</h3>
+                <p>Ideal para estudiar</p>
+                <strong>$35.000 COP</strong>
+                <button onclick="comprar('Mochila escolar')">
+                    Me interesa
+                </button>
+            </article>
+
+        </div>
+
+        <p id="mensaje"></p>
+
+        <section class="publicar" id="publicar">
+            <h2>¿Quieres vender algo?</h2>
+            <p>Publica tus productos y encuentra compradores.</p>
+
+            <form id="formulario">
+                <input type="text" id="nombre" placeholder="Nombre del producto" required>
+                <input type="number" id="precio" placeholder="Precio en pesos colombianos" min="1" required>
+                <input type="text" id="descripcion" placeholder="Descripción del producto" required>
+                <button type="submit">Publicar producto</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Garaje Online | Compra, vende y reutiliza.</p>
+    </footer>
+
+    <!-- Enlazado correctamente a app.js -->
+    <script src="app.js"></script>
+</body>
+</html>
