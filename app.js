@@ -1,39 +1,79 @@
-// Base de datos inicial por defecto
+// Base de datos inicial completa y organizada por categorías con fotos reales
 const productosIniciales = [
+    // --- TECNOLOGÍA ---
     {
         id: 1,
-        nombre: "Zapatos deportivos Nike",
-        precio: 65000,
-        categoria: "Moda",
-        descripcion: "Talla 40, en excelente estado, casi nuevos.",
-        icono: "👟",
+        nombre: "Audífonos Inalámbricos Bluetooth",
+        precio: 55000,
+        categoria: "Tecnología",
+        descripcion: "Cancelación de ruido, estuche de carga incluido.",
+        imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80",
         propietario: "Sistema"
     },
     {
         id: 2,
-        nombre: "Control PS4 Inalámbrico",
-        precio: 50000,
-        categoria: "Juegos",
-        descripcion: "Original, funcionando perfecto con cable.",
-        icono: "🎮",
+        nombre: "Smartwatch Deportivo Negro",
+        precio: 85000,
+        categoria: "Tecnología",
+        descripcion: "Monitor de ritmo cardíaco y notificaciones móviles.",
+        imagen: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80",
         propietario: "Sistema"
     },
+    // --- MODA ---
     {
         id: 3,
-        nombre: "Camiseta Casual Algodón",
-        precio: 20000,
+        nombre: "Zapatos deportivos Nike",
+        precio: 65000,
         categoria: "Moda",
-        descripcion: "Talla M, color verde oliva en muy buen estado.",
-        icono: "👕",
+        descripcion: "Talla 40, en excelente estado, casi nuevos.",
+        imagen: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80",
         propietario: "Sistema"
     },
     {
         id: 4,
-        nombre: "Mochila Escolar / Laptop",
+        nombre: "Camiseta Casual Algodón",
+        precio: 20000,
+        categoria: "Moda",
+        descripcion: "Talla M, color verde oliva en muy buen estado.",
+        imagen: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80",
+        propietario: "Sistema"
+    },
+    // --- JUEGOS ---
+    {
+        id: 5,
+        nombre: "Control Inalámbrico Consola",
+        precio: 50000,
+        categoria: "Juegos",
+        descripcion: "Ergonómico, compatible con múltiples plataformas.",
+        imagen: "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=500&q=80",
+        propietario: "Sistema"
+    },
+    {
+        id: 6,
+        nombre: "Cascos Gamer con Micrófono",
+        precio: 75000,
+        categoria: "Juegos",
+        descripcion: "Luces LED integradas, sonido envolvente estéreo.",
+        imagen: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=500&q=80",
+        propietario: "Sistema"
+    },
+    // --- HOGAR ---
+    {
+        id: 7,
+        nombre: "Lámpara de Mesa Minimalista",
+        precio: 40000,
+        categoria: "Hogar",
+        descripcion: "Luz cálida ajustable, ideal para estudio o dormitorio.",
+        imagen: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80",
+        propietario: "Sistema"
+    },
+    {
+        id: 8,
+        nombre: "Mochila Escolar Impermeable",
         precio: 35000,
         categoria: "Hogar",
-        descripcion: "Múltiples compartimentos impermeables.",
-        icono: "🎒",
+        descripcion: "Múltiples compartimentos seguros para portátil.",
+        imagen: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80",
         propietario: "Sistema"
     }
 ];
@@ -75,20 +115,16 @@ function formatearCOP(valor) {
 
 // Navegación entre Pestañas
 function cambiarPestana(tabId) {
-    // Ocultar todas las pestañas
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
     
-    // Desactivar botones de navegación
     document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.classList.remove('active', 'text-indigo-600');
         btn.classList.add('text-slate-500');
     });
 
-    // Mostrar pestaña elegida
     const tabActiva = document.getElementById(`tab-${tabId}`);
     if (tabActiva) tabActiva.classList.remove('hidden');
 
-    // Activar botón navegación
     const navBtn = document.getElementById(`nav-${tabId}`);
     if (navBtn) {
         navBtn.classList.add('active', 'text-indigo-600');
@@ -96,20 +132,20 @@ function cambiarPestana(tabId) {
     }
 }
 
-// Renderizar Todos los Contenidos
+// Renderizar Todo
 function renderizarTodo() {
-    renderizarDestacados();
+    renderizarCarruselDestacados();
     renderizarCatalogo();
     renderizarMisPublicaciones();
 }
 
-// Crear Tarjeta de Producto (HTML Reutilizable)
+// Crear Tarjeta de Producto con Imagen Real
 function crearTarjetaProducto(p) {
     return `
-        <div class="bg-white rounded-2xl p-3 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
+        <div class="bg-white rounded-2xl p-2.5 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
             <div>
-                <div class="bg-indigo-50/60 rounded-xl py-4 flex items-center justify-center text-4xl mb-2">
-                    ${p.icono || '📦'}
+                <div class="w-full h-32 rounded-xl overflow-hidden bg-slate-100 mb-2 relative">
+                    <img src="${p.imagen || 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80'}" alt="${p.nombre}" class="w-full h-full object-cover">
                 </div>
                 <span class="text-[9px] font-bold text-indigo-600 uppercase bg-indigo-50 px-2 py-0.5 rounded-full">${p.categoria}</span>
                 <h4 class="font-semibold text-slate-800 text-xs mt-1 line-clamp-1">${p.nombre}</h4>
@@ -125,14 +161,30 @@ function crearTarjetaProducto(p) {
     `;
 }
 
-// Renderizar Destacados en Inicio
-function renderizarDestacados() {
-    const container = document.getElementById('destacados-container');
-    const destacados = productos.slice(-2); // Últimos 2 agregados
-    container.innerHTML = destacados.map(p => crearTarjetaProducto(p)).join('');
+// Renderizar Carrusel Horizontal de Destacados en Inicio
+function renderizarCarruselDestacados() {
+    const container = document.getElementById('carrusel-destacados');
+    // Tomamos los primeros 5 productos para el banner deslizante
+    const destacados = productos.slice(0, 5);
+    
+    container.innerHTML = destacados.map(p => `
+        <div class="min-w-[160px] max-w-[160px] bg-white rounded-2xl p-2.5 shadow-sm border border-slate-100 flex flex-col justify-between snap-start flex-shrink-0">
+            <div>
+                <div class="w-full h-28 rounded-xl overflow-hidden bg-slate-100 mb-2">
+                    <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[9px] font-bold text-indigo-600 uppercase bg-indigo-50 px-2 py-0.5 rounded-full">${p.categoria}</span>
+                <h4 class="font-semibold text-slate-800 text-xs mt-1 line-clamp-1">${p.nombre}</h4>
+            </div>
+            <div class="mt-2 pt-2 border-t border-slate-50 flex items-center justify-between">
+                <span class="font-extrabold text-indigo-600 text-xs">${formatearCOP(p.precio)}</span>
+                <button onclick="abrirModal(${p.id})" class="bg-amber-400 text-slate-900 font-bold px-2 py-1 rounded-full text-[9px]">Ver</button>
+            </div>
+        </div>
+    `).join('');
 }
 
-// Renderizar Catálogo de Productos Completo
+// Renderizar Catálogo Completo
 function renderizarCatalogo() {
     const container = document.getElementById('lista-productos');
     const busqueda = document.getElementById('buscador-input')?.value.toLowerCase().trim() || '';
@@ -163,7 +215,6 @@ function renderizarCatalogo() {
 function filtrarPorCategoria(cat) {
     categoriaActual = cat;
     
-    // Actualizar estilo visual de los chips
     document.querySelectorAll('.chip-filtro').forEach(chip => {
         if (chip.textContent.trim() === cat) {
             chip.classList.add('bg-indigo-600', 'text-white');
@@ -197,14 +248,14 @@ function limpiarBuscador() {
     filtrarProductos();
 }
 
-// Publicar un Nuevo Producto desde el Formulario
+// Publicar Nuevo Producto
 function publicarProducto(event) {
     event.preventDefault();
 
     const nombre = document.getElementById('pub-nombre').value.trim();
     const precio = Number(document.getElementById('pub-precio').value);
     const categoria = document.getElementById('pub-categoria').value;
-    const icono = document.getElementById('pub-icono').value;
+    const imagenInput = document.getElementById('pub-imagen').value.trim();
     const descripcion = document.getElementById('pub-descripcion').value.trim();
 
     if (!nombre || !descripcion || precio <= 0) {
@@ -212,12 +263,18 @@ function publicarProducto(event) {
         return;
     }
 
+    // Imagen por defecto según categoría si no se introduce URL
+    let imagenPorDefecto = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80";
+    if (categoria === 'Hogar') imagenPorDefecto = "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80";
+    if (categoria === 'Moda') imagenPorDefecto = "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80";
+    if (categoria === 'Juegos') imagenPorDefecto = "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=500&q=80";
+
     const nuevoProducto = {
         id: Date.now(),
         nombre,
         precio,
         categoria,
-        icono,
+        imagen: imagenInput !== '' ? imagenInput : imagenPorDefecto,
         descripcion,
         propietario: "Usuario"
     };
@@ -231,7 +288,7 @@ function publicarProducto(event) {
     cambiarPestana('productos');
 }
 
-// Renderizar Publicaciones en la pestaña Perfil
+// Renderizar Perfil
 function renderizarMisPublicaciones() {
     const container = document.getElementById('mis-publicaciones-container');
     const misProds = productos.filter(p => p.propietario === "Usuario");
@@ -250,7 +307,7 @@ function renderizarMisPublicaciones() {
     container.innerHTML = misProds.map(p => `
         <div class="bg-white p-3 rounded-2xl border border-slate-100 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <span class="text-2xl">${p.icono}</span>
+                <img src="${p.imagen}" class="w-10 h-10 rounded-xl object-cover">
                 <div>
                     <h4 class="font-semibold text-xs text-slate-800">${p.nombre}</h4>
                     <span class="text-[11px] font-bold text-indigo-600">${formatearCOP(p.precio)}</span>
@@ -263,7 +320,6 @@ function renderizarMisPublicaciones() {
     `).join('');
 }
 
-// Eliminar Producto
 function eliminarProducto(id) {
     productos = productos.filter(p => p.id !== id);
     guardarLocalStorage();
@@ -271,12 +327,12 @@ function eliminarProducto(id) {
     mostrarToast('Producto eliminado', 'info-circle');
 }
 
-// Modales y Contacto
+// Modales y WhatsApp
 function abrirModal(id) {
     productoSeleccionado = productos.find(p => p.id === id);
     if (!productoSeleccionado) return;
 
-    document.getElementById('modal-icono').textContent = productoSeleccionado.icono;
+    document.getElementById('modal-imagen').src = productoSeleccionado.imagen;
     document.getElementById('modal-titulo').textContent = productoSeleccionado.nombre;
     document.getElementById('modal-precio').textContent = formatearCOP(productoSeleccionado.precio);
     document.getElementById('modal-desc').textContent = productoSeleccionado.descripcion;
@@ -297,7 +353,6 @@ function enviarMensajeWhatsApp() {
     cerrarModal();
 }
 
-// Mostrar Toast de Notificación
 function mostrarToast(mensaje, icono = 'check-circle') {
     const toast = document.getElementById('toast');
     const toastMsg = document.getElementById('toast-msg');
