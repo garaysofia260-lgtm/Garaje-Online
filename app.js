@@ -1,6 +1,5 @@
-// Base de datos completa con imágenes reales e individuales para cada artículo
+// Base de Datos Inicial de Ejemplo
 const productosIniciales = [
-    // --- TECNOLOGÍA ---
     {
         id: 1,
         nombre: "Audífonos Inalámbricos Pro",
@@ -8,142 +7,115 @@ const productosIniciales = [
         categoria: "Tecnología",
         descripcion: "Cancelación de ruido activa, estuche de carga USB-C.",
         imagen: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
+        propietarioEmail: "demo@garaje.com",
+        propietarioNombre: "Carlos Mendoza"
     },
     {
         id: 2,
-        nombre: "Cámara Réflex Profesional",
-        precio: 850000,
-        categoria: "Tecnología",
-        descripcion: "Lente 18-55mm, sensor de 24MP, bolso y tarjeta SD incluidos.",
-        imagen: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-    {
-        id: 3,
-        nombre: "Reloj Inteligente Deportivo",
-        precio: 95000,
-        categoria: "Tecnología",
-        descripcion: "Resistente al agua, medición de pulso, batería de larga duración.",
-        imagen: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-
-    // --- MODA ---
-    {
-        id: 4,
         nombre: "Tenis Deportivos Red",
         precio: 80000,
         categoria: "Moda",
         descripcion: "Talla 40, suela liviana antideslizante, excelente estado.",
         imagen: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
+        propietarioEmail: "demo@garaje.com",
+        propietarioNombre: "Carlos Mendoza"
     },
     {
-        id: 5,
-        nombre: "Chaqueta de Cuero Vintage",
-        precio: 120000,
-        categoria: "Moda",
-        descripcion: "Talla L, estilo biker de alta calidad, cremalleras metálicas.",
-        imagen: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-    {
-        id: 6,
-        nombre: "Gafas de Sol Clásicas",
-        precio: 35000,
-        categoria: "Moda",
-        descripcion: "Protección UV400, montura negra elegante con estuche rígido.",
-        imagen: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-
-    // --- JUEGOS ---
-    {
-        id: 7,
+        id: 3,
         nombre: "Mando para Consola Inalámbrico",
         precio: 55000,
         categoria: "Juegos",
         descripcion: "Soporta vibración doble, ergonómico y compatible con PC.",
         imagen: "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
+        propietarioEmail: "demo2@garaje.com",
+        propietarioNombre: "Ana María Gómez"
     },
     {
-        id: 8,
-        nombre: "Audífonos Gamer con Micrófono",
-        precio: 78000,
-        categoria: "Juegos",
-        descripcion: "Luces LED RGB, sonido envolvente y almohadillas acolchadas.",
-        imagen: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-    {
-        id: 9,
-        nombre: "Consola Portátil Retro",
-        precio: 90000,
-        categoria: "Juegos",
-        descripcion: "Incluye más de 400 juegos clásicos, pantalla a color.",
-        imagen: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-
-    // --- HOGAR ---
-    {
-        id: 10,
+        id: 4,
         nombre: "Lámpara Minimalista de Mesa",
         precio: 45000,
         categoria: "Hogar",
         descripcion: "Luz cálida LED regulable, ideal para dormitorio u oficina.",
         imagen: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-    {
-        id: 11,
-        nombre: "Mochila Moderna Multiuso",
-        precio: 40000,
-        categoria: "Hogar",
-        descripcion: "Compartimento acolchado para laptop, tela impermeable.",
-        imagen: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
-    },
-    {
-        id: 12,
-        nombre: "Sillón Confortable de Sala",
-        precio: 180000,
-        categoria: "Hogar",
-        descripcion: "Color gris, tapizado impecable, súper cómodo para descansar.",
-        imagen: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80",
-        propietario: "Sistema"
+        propietarioEmail: "demo2@garaje.com",
+        propietarioNombre: "Ana María Gómez"
     }
 ];
 
-// Estado global de la app
+// Cuentas Iniciales
+const usuariosIniciales = [
+    {
+        nombre: "Carlos Mendoza",
+        email: "demo@garaje.com",
+        pass: "123456"
+    },
+    {
+        nombre: "Ana María Gómez",
+        email: "demo2@garaje.com",
+        pass: "123456"
+    }
+];
+
+// Reseñas Iniciales
+const resenasIniciales = [
+    {
+        vendedorEmail: "demo@garaje.com",
+        autor: "María P.",
+        puntuacion: 5,
+        comentario: "Excelente vendedor, el producto llegó rápido y tal como se describió."
+    },
+    {
+        vendedorEmail: "demo@garaje.com",
+        autor: "Juan K.",
+        puntuacion: 5,
+        comentario: "Muy buena comunicación y excelente precio."
+    }
+];
+
+// Estado Global
+let usuarios = [];
+let usuarioActual = null;
 let productos = [];
+let resenas = [];
 let productoSeleccionado = null;
 let categoriaActual = "Todos";
+let estrellaSeleccionadaModal = 5;
 
 // Inicialización
 document.addEventListener("DOMContentLoaded", () => {
-    cargarProductosLocalStorage();
+    cargarDatosStorage();
     renderizarTodo();
 });
 
-// Guardado y carga en el navegador
-function cargarProductosLocalStorage() {
-    const localData = localStorage.getItem("garaje_online_productos_v2");
-    if (localData) {
-        productos = JSON.parse(localData);
-    } else {
-        productos = [...productosIniciales];
-        guardarLocalStorage();
-    }
+// Carga y Persistencia en localStorage
+function cargarDatosStorage() {
+    // Usuarios
+    const localUsers = localStorage.getItem("garaje_usuarios_v1");
+    usuarios = localUsers ? JSON.parse(localUsers) : [...usuariosIniciales];
+
+    // Usuario Activo
+    const localSession = localStorage.getItem("garaje_sesion_v1");
+    usuarioActual = localSession ? JSON.parse(localSession) : null;
+
+    // Productos
+    const localProds = localStorage.getItem("garaje_productos_v1");
+    productos = localProds ? JSON.parse(localProds) : [...productosIniciales];
+
+    // Reseñas
+    const localRes = localStorage.getItem("garaje_resenas_v1");
+    resenas = localRes ? JSON.parse(localRes) : [...resenasIniciales];
+
+    guardarStorage();
 }
 
-function guardarLocalStorage() {
-    localStorage.setItem("garaje_online_productos_v2", JSON.stringify(productos));
+function guardarStorage() {
+    localStorage.setItem("garaje_usuarios_v1", JSON.stringify(usuarios));
+    localStorage.setItem("garaje_sesion_v1", JSON.stringify(usuarioActual));
+    localStorage.setItem("garaje_productos_v1", JSON.stringify(productos));
+    localStorage.setItem("garaje_resenas_v1", JSON.stringify(resenas));
 }
 
-// Formatear precio en COP
+// Formatear Precio COP
 function formatearCOP(valor) {
     return new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -152,10 +124,9 @@ function formatearCOP(valor) {
     }).format(valor);
 }
 
-// Cambiar de Pestaña
+// Cambiar Pestaña
 function cambiarPestana(tabId) {
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
-    
     document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.classList.remove('active', 'text-indigo-600');
         btn.classList.add('text-slate-500');
@@ -171,11 +142,139 @@ function cambiarPestana(tabId) {
     }
 }
 
-// Renderizar todos los módulos
+// Renderizar Todos los Componentes
 function renderizarTodo() {
+    renderizarEstadoUsuario();
     renderizarCarruselDestacados();
     renderizarCatalogo();
     renderizarMisPublicaciones();
+    renderizarResenasPerfil();
+}
+
+// Control Vista de Perfil y Botonera
+function renderizarEstadoUsuario() {
+    const guestView = document.getElementById('perfil-guest-view');
+    const loggedView = document.getElementById('perfil-logged-view');
+    const userDot = document.getElementById('user-dot');
+
+    if (usuarioActual) {
+        guestView.classList.add('hidden');
+        loggedView.classList.remove('hidden');
+        if (userDot) userDot.classList.remove('hidden');
+
+        document.getElementById('perfil-nombre').textContent = usuarioActual.nombre;
+        document.getElementById('perfil-email').textContent = usuarioActual.email;
+        document.getElementById('perfil-avatar').textContent = usuarioActual.nombre.charAt(0).toUpperCase();
+
+        // Calcular Promedio de Reseñas
+        const misResenas = resenas.filter(r => r.vendedorEmail === usuarioActual.email);
+        const total = misResenas.length;
+        const suma = misResenas.reduce((acc, curr) => acc + curr.puntuacion, 0);
+        const promedio = total > 0 ? (suma / total).toFixed(1) : "5.0";
+
+        document.getElementById('perfil-promedio-estrellas').textContent = promedio;
+        document.getElementById('perfil-total-reseñas').textContent = `(${total} reseñas)`;
+        document.getElementById('stat-reseñas').textContent = total;
+    } else {
+        guestView.classList.remove('hidden');
+        loggedView.classList.add('hidden');
+        if (userDot) userDot.classList.add('hidden');
+    }
+}
+
+// Iniciar Sesión
+function iniciarSesion(event) {
+    event.preventDefault();
+    const email = document.getElementById('login-email').value.trim().toLowerCase();
+    const pass = document.getElementById('login-pass').value;
+
+    const coincidencia = usuarios.find(u => u.email === email && u.pass === pass);
+
+    if (coincidencia) {
+        usuarioActual = coincidencia;
+        guardarStorage();
+        renderizarTodo();
+        mostrarToast(`¡Bienvenido de nuevo, ${usuarioActual.nombre}!`, 'check-circle');
+    } else {
+        mostrarToast('Correo o contraseña incorrectos', 'exclamation-circle');
+    }
+}
+
+// Registrar Usuario
+function registrarUsuario(event) {
+    event.preventDefault();
+    const nombre = document.getElementById('reg-nombre').value.trim();
+    const email = document.getElementById('reg-email').value.trim().toLowerCase();
+    const pass = document.getElementById('reg-pass').value;
+
+    if (usuarios.some(u => u.email === email)) {
+        mostrarToast('Este correo ya está registrado', 'exclamation-circle');
+        return;
+    }
+
+    const nuevoUsuario = { nombre, email, pass };
+    usuarios.push(nuevoUsuario);
+    usuarioActual = nuevoUsuario;
+
+    guardarStorage();
+    renderizarTodo();
+    mostrarToast('¡Cuenta creada correctamente!', 'check-circle');
+}
+
+// Cerrar Sesión
+function cerrarSesion() {
+    usuarioActual = null;
+    guardarStorage();
+    renderizarTodo();
+    mostrarToast('Has cerrado sesión', 'info-circle');
+}
+
+// Alternar entre Login y Registro
+function toggleAuthForm(tipo) {
+    const loginBox = document.getElementById('form-login-container');
+    const regBox = document.getElementById('form-register-container');
+
+    if (tipo === 'register') {
+        loginBox.classList.add('hidden');
+        regBox.classList.remove('hidden');
+    } else {
+        regBox.classList.add('hidden');
+        loginBox.classList.remove('hidden');
+    }
+}
+
+// Cambiar Nombre de Usuario
+function abrirModalEditarNombre() {
+    if (!usuarioActual) return;
+    document.getElementById('input-nuevo-nombre').value = usuarioActual.nombre;
+    document.getElementById('modal-editar-nombre').classList.remove('hidden');
+}
+
+function cerrarModalEditarNombre() {
+    document.getElementById('modal-editar-nombre').classList.add('hidden');
+}
+
+function guardarNuevoNombre() {
+    const nuevoNombre = document.getElementById('input-nuevo-nombre').value.trim();
+    if (!nuevoNombre) return;
+
+    usuarioActual.nombre = nuevoNombre;
+
+    // Actualizar también en el array global
+    const idx = usuarios.findIndex(u => u.email === usuarioActual.email);
+    if (idx !== -1) usuarios[idx].nombre = nuevoNombre;
+
+    // Actualizar nombre de propietario en sus productos
+    productos.forEach(p => {
+        if (p.propietarioEmail === usuarioActual.email) {
+            p.propietarioNombre = nuevoNombre;
+        }
+    });
+
+    guardarStorage();
+    renderizarTodo();
+    cerrarModalEditarNombre();
+    mostrarToast('Nombre actualizado con éxito', 'check-circle');
 }
 
 // Plantilla de Tarjetas
@@ -200,7 +299,7 @@ function crearTarjetaProducto(p) {
     `;
 }
 
-// Banner Deslizante de Destacados
+// Carrusel de Destacados
 function renderizarCarruselDestacados() {
     const container = document.getElementById('carrusel-destacados');
     const destacados = productos.slice(0, 6);
@@ -249,7 +348,7 @@ function renderizarCatalogo() {
     container.innerHTML = filtrados.map(p => crearTarjetaProducto(p)).join('');
 }
 
-// Filtrado de Categoría
+// Filtrar Categorías
 function filtrarPorCategoria(cat) {
     categoriaActual = cat;
     
@@ -287,9 +386,15 @@ function limpiarBuscador() {
     filtrarProductos();
 }
 
-// Formulario de Venta
+// Publicar Producto
 function publicarProducto(event) {
     event.preventDefault();
+
+    if (!usuarioActual) {
+        mostrarToast('Debes iniciar sesión para publicar', 'exclamation-circle');
+        cambiarPestana('perfil');
+        return;
+    }
 
     const nombre = document.getElementById('pub-nombre').value.trim();
     const precio = Number(document.getElementById('pub-precio').value);
@@ -302,7 +407,6 @@ function publicarProducto(event) {
         return;
     }
 
-    // Imagen por defecto realista según categoría si no se pasa URL
     let imagenPorDefecto = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80";
     if (categoria === 'Hogar') imagenPorDefecto = "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80";
     if (categoria === 'Moda') imagenPorDefecto = "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80";
@@ -315,11 +419,12 @@ function publicarProducto(event) {
         categoria,
         imagen: imagenInput !== '' ? imagenInput : imagenPorDefecto,
         descripcion,
-        propietario: "Usuario"
+        propietarioEmail: usuarioActual.email,
+        propietarioNombre: usuarioActual.nombre
     };
 
     productos.unshift(nuevoProducto);
-    guardarLocalStorage();
+    guardarStorage();
     renderizarTodo();
 
     document.getElementById('form-publicar').reset();
@@ -327,17 +432,18 @@ function publicarProducto(event) {
     cambiarPestana('productos');
 }
 
-// Perfil de Usuario
+// Mis Publicaciones
 function renderizarMisPublicaciones() {
+    if (!usuarioActual) return;
     const container = document.getElementById('mis-publicaciones-container');
-    const misProds = productos.filter(p => p.propietario === "Usuario");
+    const misProds = productos.filter(p => p.propietarioEmail === usuarioActual.email);
 
     document.getElementById('stat-publicados').textContent = misProds.length;
 
     if (misProds.length === 0) {
         container.innerHTML = `
             <div class="text-center py-6 bg-white rounded-2xl border border-slate-100">
-                <p class="text-xs text-slate-400">Aún no has publicado productos.</p>
+                <p class="text-xs text-slate-400">Aún no has publicado artículos.</p>
             </div>
         `;
         return;
@@ -361,12 +467,40 @@ function renderizarMisPublicaciones() {
 
 function eliminarProducto(id) {
     productos = productos.filter(p => p.id !== id);
-    guardarLocalStorage();
+    guardarStorage();
     renderizarTodo();
     mostrarToast('Producto eliminado', 'info-circle');
 }
 
-// Modal de WhatsApp
+// Reseñas del Perfil
+function renderizarResenasPerfil() {
+    if (!usuarioActual) return;
+    const container = document.getElementById('lista-reseñas-container');
+    const misResenas = resenas.filter(r => r.vendedorEmail === usuarioActual.email);
+
+    if (misResenas.length === 0) {
+        container.innerHTML = `
+            <div class="text-center py-4 bg-white rounded-2xl border border-slate-100">
+                <p class="text-xs text-slate-400">Aún no tienes reseñas recibidas.</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = misResenas.map(r => `
+        <div class="bg-white p-3 rounded-2xl border border-slate-100 space-y-1">
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-800">${r.autor}</span>
+                <div class="text-amber-400 text-xs">
+                    ${'★'.repeat(r.puntuacion)}${'☆'.repeat(5 - r.puntuacion)}
+                </div>
+            </div>
+            <p class="text-xs text-slate-500">${r.comentario}</p>
+        </div>
+    `).join('');
+}
+
+// Modal de Detalle
 function abrirModal(id) {
     productoSeleccionado = productos.find(p => p.id === id);
     if (!productoSeleccionado) return;
@@ -375,6 +509,10 @@ function abrirModal(id) {
     document.getElementById('modal-titulo').textContent = productoSeleccionado.nombre;
     document.getElementById('modal-precio').textContent = formatearCOP(productoSeleccionado.precio);
     document.getElementById('modal-desc').textContent = productoSeleccionado.descripcion;
+    document.getElementById('modal-vendedor-badge').textContent = `Vendedor: ${productoSeleccionado.propietarioNombre}`;
+
+    seleccionarEstrella(5);
+    document.getElementById('modal-resena-texto').value = '';
 
     document.getElementById('modal-contacto').classList.remove('hidden');
 }
@@ -384,14 +522,56 @@ function cerrarModal() {
     productoSeleccionado = null;
 }
 
+// Selección de Estrellas en Modal
+function seleccionarEstrella(num) {
+    estrellaSeleccionadaModal = num;
+    const estrellas = document.querySelectorAll('#modal-star-rating i');
+    estrellas.forEach((star, index) => {
+        if (index < num) {
+            star.classList.remove('far');
+            star.classList.add('fas');
+        } else {
+            star.classList.remove('fas');
+            star.classList.add('far');
+        }
+    });
+}
+
+// Guardar Reseña enviada
+function guardarResenaModal() {
+    if (!productoSeleccionado) return;
+    const texto = document.getElementById('modal-resena-texto').value.trim();
+
+    if (!texto) {
+        mostrarToast('Escribe un comentario breve', 'exclamation-circle');
+        return;
+    }
+
+    const autorNombre = usuarioActual ? usuarioActual.nombre : "Comprador Anónimo";
+
+    resenas.unshift({
+        vendedorEmail: productoSeleccionado.propietarioEmail,
+        autor: autorNombre,
+        puntuacion: estrellaSeleccionadaModal,
+        comentario: texto
+    });
+
+    guardarStorage();
+    renderizarTodo();
+    mostrarToast('¡Reseña guardada con éxito!', 'check-circle');
+    document.getElementById('modal-resena-texto').value = '';
+}
+
+// Contacto WhatsApp
 function enviarMensajeWhatsApp() {
     if (!productoSeleccionado) return;
-    const mensaje = `Hola! Me interesa tu producto "${productoSeleccionado.nombre}" publicado en Garaje Online por ${formatearCOP(productoSeleccionado.precio)}.`;
+    const mensaje = `Hola ${productoSeleccionado.propietarioNombre}! Me interesa tu producto "${productoSeleccionado.nombre}" en Garaje Online por ${formatearCOP(productoSeleccionado.precio)}.`;
     const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
     cerrarModal();
 }
 
+// Mensaje Toast
 function mostrarToast(mensaje, icono = 'check-circle') {
     const toast = document.getElementById('toast');
     const toastMsg = document.getElementById('toast-msg');
